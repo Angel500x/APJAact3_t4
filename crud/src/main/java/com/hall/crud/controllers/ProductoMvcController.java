@@ -18,6 +18,11 @@ public class ProductoMvcController {
     @Autowired
     private CategoriaService categoriaService;
 
+    @GetMapping("/")
+public String inicio() {
+    return "redirect:/productos";
+}
+
     // Read: Listar productos
     @GetMapping
     public String listarProductos(Model model) {
